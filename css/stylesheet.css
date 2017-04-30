@@ -109,3 +109,6 @@ footer {
     text-align: right;
     padding: 0px;
     margin: 0px; }
+  footer a {
+    text-decoration: none;
+    color: #FFFFFF; }

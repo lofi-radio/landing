@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>&mdash; Lo-Fi Radio</title>
+	<!-- TODO: Make this say the song name to the left -->
+	<!-- <title>NAME &mdash; Lo-Fi Radio</title> -->
+	<!-- END TODO -->
+	<title>Lo-Fi Radio</title>
 
 	<link href="css/stylesheet.css" rel="stylesheet" type="text/css" />
 	<script type="text/javascript">
@@ -23,7 +26,6 @@
 <body>
 
 	<header>
-
 		<h1>Lo-fi <span>Radio</span></h1>
 
 		<!-- TODO: Add a login system -->
@@ -35,7 +37,7 @@
 	<section>
 
 		<audio id="audioplayer" controls="">
-			<source src="http://lofi.jakeoid.com:8000/Lo-Fi" type="audio/ogg; codecs=&quot;vorbis&quot;" />
+			<source src="http://lofi.jakeoid.com:8000/stream" type="audio/ogg; codecs=&quot;vorbis&quot;" />
 		</audio>
 
 		<div id="player">
@@ -72,13 +74,16 @@
 			<!-- <li>Request</li> -->
 			<!-- <li>Favorites</li> -->
 			<!-- <li>Submit</li> -->
-			<li>Donate</li>
+			<a href="https://discord.gg/RMwqtVS"><li>Discord</li></a>
+			<a href="https://www.patreon.com/lofiradio"><li>Donate</li></a>
 
 		</ul>
 
 		<p>
-			Got your own client?<br>
-			Download our .m3u file.
+			<a href="http://lofi.jakeoid.com:8000/stream.m3u">
+				Got your own client?<br>
+				Download our .m3u file.
+			</a>
 		</p>
 
 	</footer>
