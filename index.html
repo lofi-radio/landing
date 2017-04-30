@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>&mdash; Lo-Fi Radio</title>
+
+	<link href="css/stylesheet.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript">
+
+		function vidplay() {
+			var video = document.getElementById("audioplayer");
+			var button = document.getElementById("playback");
+			var text = document.getElementById("play");
+			if (video.paused) {
+				video.play();
+				text.textContent = "pause";
+			} else {
+				video.pause();
+				text.textContent = "play_arrow";
+			}
+		}
+	</script>
+</head>
+<body>
+
+	<header>
+
+		<h1>Lo-fi <span>Radio</span></h1>
+
+		<!-- TODO: Add a login system -->
+		<!-- <h2 id="signin">Login</h2> -->
+		<!-- END TODO -->
+
+	</header>
+
+	<section>
+
+		<audio id="audioplayer" controls="">
+			<source src="http://lofi.jakeoid.com:8000/Lo-Fi" type="audio/ogg; codecs=&quot;vorbis&quot;" />
+		</audio>
+
+		<div id="player">
+
+			<div id="playback" onclick="vidplay()">
+				<i id="play" class="material-icons">play_arrow</i>
+			</div>
+
+			<!-- TODO: Song name system -->
+			<!-- <div id="songname">
+				Loading..
+			</div> -->
+			<!-- END TODO -->
+
+			<!-- TODO: Add a starring system -->
+			<!-- <div id="star">
+				<i class="material-icons">star</i>
+			</div> -->
+			<!-- END TODO -->
+
+		</div>
+
+		<!-- TODO: Add a listener count -->
+		<!-- <div id="listeners">32 people currently chilling out.</div> -->
+		<!-- END TODO -->
+
+	</section>
+
+	<footer>
+
+		<ul id="nav">
+
+			<!-- <li>Forum</li> -->
+			<!-- <li>Request</li> -->
+			<!-- <li>Favorites</li> -->
+			<!-- <li>Submit</li> -->
+			<li>Donate</li>
+
+		</ul>
+
+		<p>
+			Got your own client?<br>
+			Download our .m3u file.
+		</p>
+
+	</footer>
+
+</body>
+</html>

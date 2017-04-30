@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import url("https://fonts.googleapis.com/css?family=Dosis:400,700");
+/* NATIVE HTML -------------------- */
+body, html {
+  padding: 0px;
+  margin: 0px;
+  height: 100%;
+  font-family: 'Dosis', sans-serif;
+  background: #0a0a0a;
+  color: #ffffff; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0; }
+
+ul {
+  text-indent: 0px;
+  list-style: none;
+  margin: 0px;
+  padding: 0px; }
+
+/* HEADER ------------------------- */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center; }
+  header h1 {
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    align-self: center; }
+    header h1 span {
+      background: #FFFFFF;
+      color: #0a0a0a;
+      border-radius: 25px;
+      font-size: 12pt;
+      margin: 0 .5rem;
+      padding: .1rem .8rem; }
+  header #signin {
+    text-transform: uppercase; }
+
+/* SECTION / BODY ------------------ */
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100%; }
+  section audio {
+    display: none; }
+  section #player {
+    display: flex;
+    z-index: 1;
+    width: 80%;
+    height: 50px;
+    background: #FFFFFF;
+    color: #1a1a1a; }
+    section #player #playback {
+      height: 50px;
+      width: 50px;
+      line-height: 60px;
+      text-align: center;
+      cursor: pointer; }
+    section #player #songname {
+      width: calc(100% - 100px);
+      text-align: center;
+      font-weight: bold;
+      line-height: 50px;
+      text-transform: uppercase; }
+    section #player #star {
+      height: 50px;
+      width: 50px;
+      line-height: 60px;
+      text-align: center; }
+  section #listeners {
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 20px 0px; }
+
+/* FOOTER ------------------------- */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center; }
+  footer ul#nav li {
+    font-size: 18pt;
+    text-transform: uppercase; }
+  footer p {
+    position: relative;
+    line-height: normal;
+    text-transform: uppercase;
+    font-size: 18pt;
+    text-align: right;
+    padding: 0px;
+    margin: 0px; }
