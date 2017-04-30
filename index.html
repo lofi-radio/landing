@@ -9,6 +9,26 @@
 	<link href="css/stylesheet.css" rel="stylesheet" type="text/css" />
 	<script type="text/javascript">
 
+		window.addEventListener("keydown", checkKeyPressed, false);
+
+		function checkKeyPressed(e) {
+			if (e.keyCode == "32") {
+				var video = document.getElementById("audioplayer");
+				var button = document.getElementById("playback");
+				var text = document.getElementById("play");
+				if (video.paused) {
+					video.play();
+					text.textContent = "pause";
+				} else {
+					video.pause();
+					text.textContent = "play_arrow";
+				}
+			}
+			if ((e.which == 191 || e.keyCode == 191) && e.metaKey) {
+				// TODO -- MAKE A MODAL MENU
+			}
+		}
+
 		function vidplay() {
 			var video = document.getElementById("audioplayer");
 			var button = document.getElementById("playback");
