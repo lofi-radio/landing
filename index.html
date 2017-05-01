@@ -1,77 +1,69 @@
+<!--
+
+	┬  ┌─┐┌─┐┬  ┬─┐┌─┐┌┬┐┬┌─┐
+	│  │ │├┤ │  ├┬┘├─┤ ││││ │
+	┴─┘└─┘└  ┴  ┴└─┴ ┴─┴┘┴└─┘
+
+
+	@author: jakeoid;
+	@contributors: n/a;
+	@page: https://lofi.jakeoid.com/;
+
+-->
+
 <!DOCTYPE html>
 <html>
 <head>
-	<!-- TODO: Make this say the song name to the left -->
-	<!-- <title>NAME &mdash; Lo-Fi Radio</title> -->
-	<!-- END TODO -->
+
+ 	<!-- META  - - - - - - - - - - - -->
+ 	<!-- - - - - - - - - - - - - - - -->
 	<title>Lo-Fi Radio</title>
 
+ 	<!-- STYLES  - - - - - - - - - - -->
+ 	<!-- - - - - - - - - - - - - - - -->
 	<link href="css/stylesheet.css" rel="stylesheet" type="text/css" />
-	<script type="text/javascript">
 
-		window.addEventListener("keydown", checkKeyPressed, false);
-
-		function checkKeyPressed(e) {
-			if (e.keyCode == "32") {
-				var video = document.getElementById("audioplayer");
-				var button = document.getElementById("playback");
-				var text = document.getElementById("play");
-				if (video.paused) {
-					video.play();
-					text.textContent = "pause";
-				} else {
-					video.pause();
-					text.textContent = "play_arrow";
-				}
-			}
-			if ((e.which == 191 || e.keyCode == 191) && e.metaKey) {
-				// TODO -- MAKE A MODAL MENU
-			}
-		}
-
-		function vidplay() {
-			var video = document.getElementById("audioplayer");
-			var button = document.getElementById("playback");
-			var text = document.getElementById("play");
-			if (video.paused) {
-				video.play();
-				text.textContent = "pause";
-			} else {
-				video.pause();
-				text.textContent = "play_arrow";
-			}
-		}
-	</script>
 </head>
 <body>
 
+ 	<!-- HEADER  - - - - - - - - - - -->
+ 	<!-- - - - - - - - - - - - - - - -->
+
 	<header>
+ 		<!-- HEADER  - - - - - - - - - - -->
 		<h1>Lo-fi <span>Radio</span></h1>
 
+ 		<!-- LOGIN - - - - - - - - - - - -->
 		<!-- TODO: Add a login system -->
 		<!-- <h2 id="signin">Login</h2> -->
 		<!-- END TODO -->
-
 	</header>
+
+ 	<!-- SECTION - - - - - - - - - - -->
+ 	<!-- - - - - - - - - - - - - - - -->
 
 	<section>
 
+ 		<!-- AUDIO - - - - - - - - - - - -->
 		<audio id="audioplayer" controls="">
+ 			<!-- SOURCE  - - - - - - - - - - -->
 			<source src="http://lofi.jakeoid.com:8000/stream" type="audio/ogg; codecs=&quot;vorbis&quot;" />
 		</audio>
 
+ 		<!-- PLAYER  - - - - - - - - - - -->
 		<div id="player">
 
+ 			<!-- PLAYBACK  - - - - - - - - - -->
 			<div id="playback" onclick="vidplay()">
 				<i id="play" class="material-icons">play_arrow</i>
 			</div>
 
-			<!-- TODO: Song name system -->
-			<!-- <div id="songname">
+ 			<!-- TITLE - - - - - - - - - - - -->
+			<div id="track-title">
 				Loading..
-			</div> -->
-			<!-- END TODO -->
+			</div>
 
+ 			<!-- STAR  - - - - - - - - - - - -->
 			<!-- TODO: Add a starring system -->
 			<!-- <div id="star">
 				<i class="material-icons">star</i>
@@ -80,25 +72,29 @@
 
 		</div>
 
-		<!-- TODO: Add a listener count -->
-		<!-- <div id="listeners">32 people currently chilling out.</div> -->
-		<!-- END TODO -->
+ 		<!-- LISTENERS - - - - - - - - - -->
+		<div id="listeners"><span id="listener-count"></span></div>
 
 	</section>
 
+ 	<!-- FOOTER  - - - - - - - - - - -->
+ 	<!-- - - - - - - - - - - - - - - -->
+
 	<footer>
 
+ 		<!-- NAVIGATION - - - - - - - - - -->
 		<ul id="nav">
 
 			<!-- <li>Forum</li> -->
 			<!-- <li>Request</li> -->
 			<!-- <li>Favorites</li> -->
-			<!-- <li>Submit</li> -->
-			<a href="https://discord.gg/RMwqtVS"><li>Discord</li></a>
+			<a href="https://goo.gl/forms/klVhTRPdPa8SV7tM2" target="_blank"><li>Submit</li></a>
+			<a href="https://discord.gg/RMwqtVS" target="_blank"><li>Discord</li></a>
 			<a href="https://www.patreon.com/lofiradio"><li>Donate</li></a>
 
 		</ul>
 
+ 		<!-- M3U  - - - - - - - - - - - - -->
 		<p>
 			<a href="http://lofi.jakeoid.com:8000/stream.m3u">
 				Got your own client?<br>
@@ -107,6 +103,13 @@
 		</p>
 
 	</footer>
+
+ 	<!-- SCRIPTS - - - - - - - - - - -->
+ 	<!-- - - - - - - - - - - - - - - -->
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="js/radioinfo.js"></script>
+	<script src="js/radiocontrols.js"></script>
 
 </body>
 </html>

@@ -69,7 +69,7 @@ section {
       line-height: 60px;
       text-align: center;
       cursor: pointer; }
-    section #player #songname {
+    section #player #track-title {
       width: calc(100% - 100px);
       text-align: center;
       font-weight: bold;
