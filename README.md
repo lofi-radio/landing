@@ -29,4 +29,4 @@ $ gulp
 
 # License
 
-A copy of the MIT license can be found in `LICENSE.md`.
+A copy of the MIT license can be found in `LICENSE.md`
