@@ -27,6 +27,15 @@ ul {
 	padding: 0px;
 }
 
+::selection {
+	background: #0a0a0a;
+	color: #FFFFFF;
+}
+
+* {
+	outline: none;
+}
+
 /* HEADER ------------------------- */
 
 header {
@@ -61,8 +70,9 @@ header {
 
 	}
 
-	#signin {
-		text-transform: uppercase;
+	i {
+		width: 24px;
+		opacity: .1;
 	}
 
 }
@@ -91,6 +101,7 @@ section {
 		height: 50px;
 
 		background: #FFFFFF;
+		border-radius: 2px;
 		color: #1a1a1a;
 
 		#playback {
@@ -101,6 +112,7 @@ section {
 			text-align: center;
 
 			cursor: pointer;
+
 		}
 
 		#track-title {
@@ -129,6 +141,23 @@ section {
 
 }
 
+/* MODAL -------------------------- */
+
+#modal {
+
+	padding: 25px;
+
+	position: fixed;
+
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+
+	background: #1d1d1d;
+
+	z-index: 2;
+}
+
 /* FOOTER ------------------------- */
 
 footer {
@@ -144,7 +173,7 @@ footer {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	align-items: center;
+	align-items: flex-end;
 
 	ul#nav {
 		li {
@@ -167,4 +196,25 @@ footer {
 		text-decoration: none;
 		color: #FFFFFF;
 	}
+}
+
+/** 
+
+**/
+
+input[type="range"]{
+	-webkit-appearance: none;
+	-moz-apperance: none;
+	border-radius: 6px;
+	height: 6px;
+	outline: none;
+	background-color: #FFFFFF;
+}
+
+input[type='range']::-webkit-slider-thumb {
+	-webkit-appearance: none !important;
+	background-color: #FFFFFF;
+	height: 15px;
+	width: 15px;
+	border-radius: 100%;
 }

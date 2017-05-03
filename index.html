@@ -15,55 +15,70 @@
 <html>
 <head>
 
- 	<!-- META  - - - - - - - - - - - -->
- 	<!-- - - - - - - - - - - - - - - -->
+	<!-- META  - - - - - - - - - - - -->
+	<!-- - - - - - - - - - - - - - - -->
 	<title>Lo-Fi Radio</title>
+	<meta charset='utf-8' />
+	<meta http-equiv='X-UA-Compatible', content='IE=edge' />
+	<meta name='viewport' content='width=device-width initial-scale=1' />
+	<meta name='theme-color' content='#1d1d1d' />
 
- 	<!-- STYLES  - - - - - - - - - - -->
- 	<!-- - - - - - - - - - - - - - - -->
+	<!-- ICON  - - - - - - - - - - - -->
+	<!-- - - - - - - - - - - - - - - -->
+	<link rel='icon' type='image/png' href='img/favicon.png' />
+
+	<!-- STYLES  - - - - - - - - - - -->
+	<!-- - - - - - - - - - - - - - - -->
 	<link href="css/stylesheet.css" rel="stylesheet" type="text/css" />
 
 </head>
 <body>
 
- 	<!-- HEADER  - - - - - - - - - - -->
- 	<!-- - - - - - - - - - - - - - - -->
+	<!-- MODAL - - - - - - - - - - - -->
+	<!-- - - - - - - - - - - - - - - -->
+
+	<div id="modal">
+
+		<textarea /></textarea>
+
+	</div>
+
+	<!-- HEADER  - - - - - - - - - - -->
+	<!-- - - - - - - - - - - - - - - -->
 
 	<header>
- 		<!-- HEADER  - - - - - - - - - - -->
+		<!-- HEADER  - - - - - - - - - - -->
 		<h1>Lo-fi <span>Radio</span></h1>
 
- 		<!-- LOGIN - - - - - - - - - - - -->
-		<!-- TODO: Add a login system -->
-		<!-- <h2 id="signin">Login</h2> -->
-		<!-- END TODO -->
+		<!-- RANGE - - - - - - - - - - - -->
+		<input id="volumerange" type="range" min="0" max="100">
 	</header>
 
- 	<!-- SECTION - - - - - - - - - - -->
- 	<!-- - - - - - - - - - - - - - - -->
+	<!-- SECTION - - - - - - - - - - -->
+	<!-- - - - - - - - - - - - - - - -->
 
 	<section>
 
- 		<!-- AUDIO - - - - - - - - - - - -->
+		<!-- AUDIO - - - - - - - - - - - -->
 		<audio id="audioplayer" controls="">
- 			<!-- SOURCE  - - - - - - - - - - -->
+			<!-- SOURCE  - - - - - - - - - - -->
 			<source src="http://lofi.jakeoid.com:8000/stream" type="audio/ogg; codecs=&quot;vorbis&quot;" />
 		</audio>
 
- 		<!-- PLAYER  - - - - - - - - - - -->
+		<!-- PLAYER  - - - - - - - - - - -->
 		<div id="player">
 
- 			<!-- PLAYBACK  - - - - - - - - - -->
+			<!-- PLAYBACK  - - - - - - - - - -->
 			<div id="playback" onclick="vidplay()">
 				<i id="play" class="material-icons">play_arrow</i>
 			</div>
 
- 			<!-- TITLE - - - - - - - - - - - -->
+			<!-- TITLE - - - - - - - - - - - -->
 			<div id="track-title">
 				Loading..
 			</div>
 
- 			<!-- STAR  - - - - - - - - - - - -->
+			<!-- STAR  - - - - - - - - - - - -->
 			<!-- TODO: Add a starring system -->
 			<!-- <div id="star">
 				<i class="material-icons">star</i>
@@ -72,17 +87,17 @@
 
 		</div>
 
- 		<!-- LISTENERS - - - - - - - - - -->
+		<!-- LISTENERS - - - - - - - - - -->
 		<div id="listeners"><span id="listener-count"></span></div>
 
 	</section>
 
- 	<!-- FOOTER  - - - - - - - - - - -->
- 	<!-- - - - - - - - - - - - - - - -->
+	<!-- FOOTER  - - - - - - - - - - -->
+	<!-- - - - - - - - - - - - - - - -->
 
 	<footer>
 
- 		<!-- NAVIGATION - - - - - - - - - -->
+		<!-- NAVIGATION - - - - - - - - - -->
 		<ul id="nav">
 
 			<!-- <li>Forum</li> -->
@@ -94,7 +109,7 @@
 
 		</ul>
 
- 		<!-- M3U  - - - - - - - - - - - - -->
+		<!-- M3U  - - - - - - - - - - - - -->
 		<p>
 			<a href="http://lofi.jakeoid.com:8000/stream.m3u">
 				Got your own client?<br>
@@ -104,10 +119,11 @@
 
 	</footer>
 
- 	<!-- SCRIPTS - - - - - - - - - - -->
- 	<!-- - - - - - - - - - - - - - - -->
+	<!-- SCRIPTS - - - - - - - - - - -->
+	<!-- - - - - - - - - - - - - - - -->
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="js/modal.js"></script>
 	<script src="js/radioinfo.js"></script>
 	<script src="js/radiocontrols.js"></script>
 

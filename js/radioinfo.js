@@ -14,7 +14,7 @@ function updateCounts() {
 	/** Grab our statistics **/
 	$.getJSON("http://lofi.jakeoid.com/stats", function(result){
 		/** Log to our console the new information **/
-		console.log('[STATS] Updated counts.')
+		console.log('[INFO] Song Name and Listeners Count being added.')
 
 		/** Get our variables to return in our information **/
 		var songname = result['icestats']['source']['title'] + " - " + result['icestats']['source']['artist']
@@ -26,7 +26,7 @@ function updateCounts() {
 		$('#track-title').text(songname); 
 		
 		/** PAGE TITLE **/
-		document.title = songname;
+		document.title = songname + " | " + "LoFi Radio";
 
 		/** LISTENER COUNT **/
 		/** See that we have more than no viewers **/
@@ -45,6 +45,9 @@ function updateCounts() {
 			/** Update the text. **/
 			$('#listener-count').text("Nobody is currently chilling out."); 
 		}
+
+		/** Log some output **/
+		console.log('[INFO] Succesfully updated all of the values.')
 	});
 	
 }
