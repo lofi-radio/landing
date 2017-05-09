@@ -104,7 +104,7 @@ section {
 		border-radius: 2px;
 		color: #1a1a1a;
 
-		#playback {
+		#playback, #skiptillnext {
 			height: 50px;
 			width: 50px;
 
@@ -112,11 +112,10 @@ section {
 			text-align: center;
 
 			cursor: pointer;
-
 		}
 
 		#track-title {
-			width: calc(100% - 100px);
+			width: 100%;
 			text-align: center;
 			font-weight: bold;
 			line-height: 50px;
@@ -177,8 +176,23 @@ footer {
 
 	ul#nav {
 		li {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+
 			font-size: 18pt;
 			text-transform: uppercase;
+
+			span {
+				font-size: 80%;
+				margin-left: .5rem;
+				padding: 0rem .5rem;
+				color: #0a0a0a;
+				font-size: 14px;
+				font-weight: bold;
+				background: #FFFFFF;
+				border-radius: 50px;
+			}
 		}
 	}
 

@@ -34,15 +34,6 @@
 </head>
 <body>
 
-	<!-- MODAL - - - - - - - - - - - -->
-	<!-- - - - - - - - - - - - - - - -->
-
-	<div id="modal">
-
-		<textarea /></textarea>
-
-	</div>
-
 	<!-- HEADER  - - - - - - - - - - -->
 	<!-- - - - - - - - - - - - - - - -->
 
@@ -62,7 +53,7 @@
 		<!-- AUDIO - - - - - - - - - - - -->
 		<audio id="audioplayer" controls="">
 			<!-- SOURCE  - - - - - - - - - - -->
-			<source src="http://lofi.jakeoid.com:8000/stream" type="audio/ogg; codecs=&quot;vorbis&quot;" />
+			<source src="http://lofi-radio.co:8000/stream" type="audio/ogg; codecs=&quot;vorbis&quot;" />
 		</audio>
 
 		<!-- PLAYER  - - - - - - - - - - -->
@@ -75,7 +66,12 @@
 
 			<!-- TITLE - - - - - - - - - - - -->
 			<div id="track-title">
-				Loading..
+				<span id="title"></span> &mdash; <span id="artist"></span>
+			</div>
+
+			<!-- SKIP  - - - - - - - - - - - -->
+			<div id="skiptillnext" onclick="mutetillnext()">
+				<i id="play" class="material-icons">skip_next</i>
 			</div>
 
 			<!-- STAR  - - - - - - - - - - - -->
@@ -103,6 +99,7 @@
 			<!-- <li>Forum</li> -->
 			<!-- <li>Request</li> -->
 			<!-- <li>Favorites</li> -->
+			<a href="javascript:toggleNotify();"><li>Notify <span id="notifystatus">Off</span></li></a>
 			<a href="https://goo.gl/forms/klVhTRPdPa8SV7tM2" target="_blank"><li>Submit</li></a>
 			<a href="https://discord.gg/RMwqtVS" target="_blank"><li>Discord</li></a>
 			<a href="https://www.patreon.com/lofiradio"><li>Donate</li></a>
@@ -124,8 +121,8 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script src="js/modal.js"></script>
-	<script src="js/radioinfo.js"></script>
 	<script src="js/radiocontrols.js"></script>
+	<script src="js/radioinfo.js"></script>
 
 </body>
 </html>
